@@ -21,7 +21,7 @@ const Details = ({navigation, route}) => {
             </View>
 
             <Card style={{margin:3}}
-            onPress={()=>{Linking.openURL('mailto:${karyawan.email})')}}>
+            onPress={()=>{Linking.openURL(`mailto:${karyawan.email}&subject`)}}>
                 <View style={{flexDirection:'row', padding:8}}>
                 <MaterialIcons name='email' size={32} color='#006aff'/>
                 <Text style={styles.teks}>{karyawan.email}</Text>
@@ -29,7 +29,7 @@ const Details = ({navigation, route}) => {
             </Card>
 
             <Card style={{margin:3}}
-            onPress={()=>{Linking.openURL('tel:${karyawan.telp}')}}>
+            onPress={()=>{Linking.openURL(`tel:${karyawan.telp}`)}}>
                 <View style={{flexDirection:'row', padding:8}}>
                     <Entypo name="email" size={32} color='#006aff'/>
                     <Text style={styles.teks}>{karyawan.telp}</Text>
